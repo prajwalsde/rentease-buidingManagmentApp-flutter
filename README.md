@@ -218,8 +218,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **RentEase Development Team**
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: contact@rentease.example
+- GitHub: [@yourusername](https://github.com/prajwalsde)
 
 ## 🗺️ Roadmap
 
@@ -240,7 +239,6 @@ Currently, there are no known critical issues. Please report bugs using the [Git
 
 For support, please:
 - Open an issue on [GitHub Issues](https://github.com/yourusername/rentease/issues)
-- Contact the development team at support@rentease.example
 - Check [Discussions](https://github.com/yourusername/rentease/discussions) for Q&A
 
 ## 🙏 Acknowledgments

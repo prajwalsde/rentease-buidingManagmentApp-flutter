@@ -1,0 +1,71 @@
+name: rentease
+description: RentEase SaaS property management app scaffold.
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Firebase
+  firebase_core: any
+  firebase_auth: any
+  cloud_firestore: any
+  firebase_storage: any
+  firebase_messaging: any
+
+  # State management
+  flutter_riverpod: any
+  riverpod_annotation: any
+
+  # Navigation
+  go_router: any
+
+  # Code generation
+  freezed_annotation: any
+  json_annotation: any
+
+  # UI & Fonts
+  google_fonts: any
+  flutter_svg: any
+  cached_network_image: any
+  shimmer: any
+  fl_chart: any
+
+  # Local storage
+  flutter_secure_storage: any
+  shared_preferences: any
+
+  # Utilities
+  intl: any
+  dartz: any
+  equatable: any
+  uuid: any
+
+  # PDF & export
+  pdf: any
+  printing: any
+  share_plus: any
+
+  # Notifications
+  flutter_local_notifications: any
+
+  # Image picker
+  image_picker: any
+
+  cupertino_icons: any
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: any
+  riverpod_generator: any
+  freezed: any
+  json_serializable: any
+  flutter_lints: any
+
+flutter:
+  uses-material-design: true

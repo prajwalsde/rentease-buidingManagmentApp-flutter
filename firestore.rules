@@ -1,0 +1,46 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      // TODO: Validate owner role in users collection.
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isTenant(tenantId) {
+      // TODO: Validate tenant role and tenant reference.
+      return isAuthenticated() && request.auth.uid == tenantId;
+    }
+
+    match /users/{userId} {
+      allow read, write: if isAuthenticated() && request.auth.uid == userId;
+    }
+
+    match /buildings/{buildingId} {
+      // TODO: Owner can read/write only own buildings by ownerId.
+      allow read, write: if isAuthenticated();
+    }
+
+    match /tenants/{tenantId} {
+      // TODO: Owner can read/write own tenants, tenant can read own profile.
+      allow read, write: if isAuthenticated();
+    }
+
+    match /rent_payments/{paymentId} {
+      // TODO: Owner can read/write own payments, tenant can read own payments only.
+      allow read, write: if isAuthenticated();
+    }
+
+    match /electricity_bills/{billId} {
+      // TODO: Owner can read/write own bills, tenant can read own bills only.
+      allow read, write: if isAuthenticated();
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
